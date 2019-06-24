@@ -1,0 +1,13 @@
+version: '3.3'
+
+#MS-SQL Server
+services:
+  sql:
+    hostname: sql
+    image: 'microsoft/mssql-server-linux'
+    ports:
+      - '1433:1433'
+    environment:
+      - ACCEPT_EULA=yes
+      - SA_PASSWORD=Pass@word1
+    restart: always

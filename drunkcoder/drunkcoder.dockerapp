@@ -1,0 +1,28 @@
+# Version of the application
+version: 0.1.0
+# Name of the application
+name: drunkcoder
+# A short description of the application
+description: 
+# List of application maintainers with name and email for each
+maintainers:
+  - name: DESKTOP-45DGTA3\Steven
+    email: 
+
+---
+version: '3.7'
+
+services:
+  web:
+    image: baoduy2412/drunkcoder
+    restart: always
+    ports:
+      - 8443:8443
+    volumes:
+      - ./tmp/data:/data
+      - ./tmp/home:/home
+      - ./tmp/home/coder/project:/home/coder/project
+    command: '-P Steven1234 --allow-http'
+
+---
+{}

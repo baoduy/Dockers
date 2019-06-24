@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  web:
+    image: baoduy2412/drunkcoder
+    restart: always
+    ports:
+      - 8443:8443
+      - 4000:3000
+    volumes:
+      - ./tmp/data:/data
+      - ./tmp/home:/home
+      - ./tmp/home/coder/project:/home/coder/project
+    command: '-P Steven1234 --allow-http'
