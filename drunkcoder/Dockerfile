@@ -1,4 +1,4 @@
-FROM  codercom/code-server@latest
+FROM  codercom/code-server
 
 # update the repository sources list and install dependencies
 RUN sudo apt-get update -yq
